@@ -1,0 +1,22 @@
+/* src/components/HuffmanVisualizer/CodePanel.css */
+.code-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .code-panel li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  
+  .code-panel li:last-child {
+    border-bottom: none;
+  }
+  
+  .code-panel strong {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+  }
+  

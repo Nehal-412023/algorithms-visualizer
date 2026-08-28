@@ -1,0 +1,156 @@
+/* Header.css */
+.header {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Deeper, more prominent shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: #fff; /* Default white text color */
+  transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Transition shadow too */
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Rich, deep blue gradient */
+  padding: 12px 20px; /* Slightly adjusted padding */
+}
+
+.header:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
+  background: linear-gradient(135deg, #2a5298, #3f72af); /* Subtle gradient shift on hover */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.2rem; /* Slightly larger logo */
+  font-weight: 700;
+  color: #fff; /* White logo text */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Strong, rich text shadow */
+}
+
+.logo-icon {
+  margin-right: 14px;
+  font-size: 2.8rem; /* Larger icon */
+  color: #fdd835; /* Vibrant yellow/gold for icon */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Rich icon shadow */
+}
+
+.menu-container {
+  position: relative;
+}
+
+.menu-toggle {
+  background: rgba(255, 255, 255, 0.2); /* Slightly more visible white */
+  border: none;
+  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition shadow */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle toggle shadow */
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1); /* Subtle scale on hover */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Enhanced toggle shadow on hover */
+}
+
+.menu-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon-wrapper.open {
+  transform: rotate(90deg);
+}
+
+.menu-icon {
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Icon shadow */
+}
+
+.menu-nav {
+  position: fixed;
+  top: 0;
+  left: -280px; /* Slightly wider sidebar */
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(to bottom, #2a5298, #1e3c72); /* Rich sidebar gradient */
+  transition: left 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition shadow */
+  z-index: 1002;
+  box-shadow: 6px 0 16px rgba(0, 0, 0, 0.7); /* More prominent sidebar shadow */
+}
+
+.menu-nav.open {
+  left: 0;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 25px;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* More visible separator */
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #fff; /* White link text */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 500; /* Slightly bolder link text */
+  transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out; /* Transition text shadow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Subtle link shadow */
+}
+
+.menu-link:hover {
+  color: #fdd835; /* Vibrant hover color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .logo-icon {
+    font-size: 2.4rem;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-icon {
+    font-size: 1.6rem;
+  }
+}

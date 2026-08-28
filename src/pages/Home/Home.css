@@ -1,0 +1,223 @@
+/* src/components/Home.css */
+
+.home-container {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  text-align: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: background 0.5s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  color: white;
+  flex-shrink: 0;
+  margin-bottom: 30px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+  font-size: clamp(1.3rem, 3.2vw, 1.6rem);
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.explore-btn {
+  padding: 16px 32px;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  background-color: white;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.explore-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes buttonHover {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+.about-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin: 30px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 950px;
+  text-align: left;
+}
+
+.about-section h2 {
+  font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #3498db;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.about-section p {
+  font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+  line-height: 1.7;
+  color: #555;
+}
+
+.features-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.features-section h2 {
+  font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #8e44ad;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Increased gap for better visual separation */
+  margin-top: 40px;
+}
+
+.feature-card {
+  padding: 30px;
+  border-radius: 15px; /* Slightly more rounded */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0);
+  position: relative;
+  overflow: hidden;
+  /* 3D Effect */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for definition */
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Subtle gradient overlay for depth */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.feature-card > * {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 2;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.05); /* More pronounced hover */
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2), -8px -8px 20px rgba(255, 255, 255, 0.9);
+}
+
+.feature-card h3 {
+  font-size: clamp(1.8rem, 4.5vw, 2.2rem);
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card p {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  line-height: 1.7;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: clamp(3rem, 8vw, 4rem);
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 25px;
+  }
+}
+
+.hero-title-animated {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

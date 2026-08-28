@@ -1,0 +1,24 @@
+{
+  "training_data": [
+    {
+      "question": "What is Bubble Sort?",
+      "answer": "Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order."
+    },
+    {
+      "question": "How does Merge Sort work?",
+      "answer": "Merge Sort is a divide-and-conquer algorithm that divides the array into halves, recursively sorts them, and then merges the sorted halves."
+    },
+    {
+      "question": "What is the time complexity of Quick Sort?",
+      "answer": "The average time complexity of Quick Sort is O(n log n), but in the worst case, it can be O(n^2)."
+    },
+    {
+      "question": "Can you explain Selection Sort?",
+      "answer": "Selection Sort repeatedly finds the minimum element from the unsorted part of the array and places it at the beginning."
+    },
+    {
+      "question": "What is the purpose of this project?",
+      "answer": "This project is a Sorting Visualizer that helps users understand sorting algorithms through interactive visualizations."
+    }
+  ]
+}

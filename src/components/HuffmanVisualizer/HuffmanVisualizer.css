@@ -1,0 +1,144 @@
+:root {
+    --clr-primary: #6c5ce7;
+    --clr-bg: #f1f2f6;
+    --clr-card: #fff;
+    --clr-text: #2d3436;
+    --clr-muted: #636e72;
+    --shadow: 0 6px 20px rgba(0,0,0,0.08);
+    --radius: 14px;
+    --speed: 0.3s ease;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    line-height: 1.6;
+  }
+  
+  
+h1 {
+    font-weight: 700;
+    color: #d60404 !important; 
+    margin: 0 0 1rem;
+}
+
+h2 {
+    font-weight: 700;
+    color: var(--clr-primary); 
+    margin: 0 0 1rem;
+}
+
+  
+  p {
+    color: var(--clr-muted);
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .huffman-visualizer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .huffman-header {
+    text-align: center;
+  }
+  
+  .huffman-input-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--clr-card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .huffman-input {
+    flex: 1 1 300px;
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+    border: 2px solid #dfe6e9;
+    border-radius: var(--radius);
+    transition: all var(--speed);
+  }
+  .huffman-input:focus {
+    border-color: var(--clr-primary);
+    outline: none;
+    box-shadow: 0 0 8px rgba(108,92,231,0.3);
+  }
+  
+  .huffman-generate-btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--clr-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--speed);
+  }
+  .huffman-generate-btn:hover {
+    background: #574ae2;
+    transform: translateY(-3px);
+  }
+  
+  .huffman-section {
+    background: var(--clr-card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--speed);
+  }
+  .huffman-section:hover {
+    transform: translateY(-4px);
+  }
+  
+  .huffman-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.4rem;
+  }
+  
+  /* Panels Grid (Optional if used) */
+  .panels {
+    display: grid;
+    gap: 2rem;
+  }
+  @media(min-width: 768px) {
+    .panels {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media(min-width: 1024px) {
+    .panels {
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+  
+  /* Responsive */
+  @media(max-width: 600px) {
+    .huffman-input-section {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1rem;
+    }
+    .huffman-generate-btn,
+    .huffman-input {
+      width: 100%;
+    }
+    .huffman-section {
+      padding: 1rem;
+    }
+  }
+  
